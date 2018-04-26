@@ -30,9 +30,15 @@ class TakePhotoViewController: UIViewController {
             takePhotoButton.isEnabled = false
             usePhotoButton.isEnabled = false
             uploadActivityIndicatorView.startAnimating()
-            Alamofire.upload(imageData.base64EncodedData(), to: "http://10.0.0.71:8585/photo")
-                .validate()
-                .responseData { response in
+//            Alamofire.upload(imageData.base64EncodedData(), to: "http://172.29.94.19:8585/photo")
+//                .validate()
+            
+            let imageString = imageData.base64EncodedString(options: .endLineWithLineFeed)
+            let parameters:[String: String] = [
+                "image":imageString
+            ]
+            Alamofire.request("http://172.29.94.19:8585/photo", method: .post,parameters: parameters, encoding: URLEncoding.httpBody)
+                .responseJSON{ response in
                     if let data = response.data, let resturants = try? JSONDecoder().decode([Resturant].self, from: data) {
                         self.resturants = resturants
                         self.performSegue(withIdentifier: "showSearchResults", sender: self)

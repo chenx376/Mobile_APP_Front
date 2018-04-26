@@ -16,6 +16,10 @@
 		25F5992F208BFF4A008CFB37 /* SearchResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F5992E208BFF4A008CFB37 /* SearchResultsViewController.swift */; };
 		25F59931208C0117008CFB37 /* Resturant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F59930208C0117008CFB37 /* Resturant.swift */; };
 		25F59937208C05A0008CFB37 /* ResturantCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F59936208C05A0008CFB37 /* ResturantCell.swift */; };
+		4DC5431B2091A8E800E9801C /* TakePhotoIngredientsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC5431A2091A8E800E9801C /* TakePhotoIngredientsViewController.swift */; };
+		4DC5431D20925AF200E9801C /* ShoppingItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC5431C20925AF200E9801C /* ShoppingItem.swift */; };
+		4DC5431F20925B6D00E9801C /* ShoppingItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC5431E20925B6D00E9801C /* ShoppingItemCell.swift */; };
+		4DC5432120925FA400E9801C /* ShoppingListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC5432020925FA400E9801C /* ShoppingListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +35,10 @@
 		25F59930208C0117008CFB37 /* Resturant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resturant.swift; sourceTree = "<group>"; };
 		25F59936208C05A0008CFB37 /* ResturantCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResturantCell.swift; sourceTree = "<group>"; };
 		3260565DF71B94D497883A2C /* Pods-Resturants.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Resturants.release.xcconfig"; path = "Pods/Target Support Files/Pods-Resturants/Pods-Resturants.release.xcconfig"; sourceTree = "<group>"; };
+		4DC5431A2091A8E800E9801C /* TakePhotoIngredientsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakePhotoIngredientsViewController.swift; sourceTree = "<group>"; };
+		4DC5431C20925AF200E9801C /* ShoppingItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingItem.swift; sourceTree = "<group>"; };
+		4DC5431E20925B6D00E9801C /* ShoppingItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingItemCell.swift; sourceTree = "<group>"; };
+		4DC5432020925FA400E9801C /* ShoppingListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingListViewController.swift; sourceTree = "<group>"; };
 		5CD4351175815B68CE5754C7 /* Pods-Resturants.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Resturants.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Resturants/Pods-Resturants.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -67,10 +75,14 @@
 		250C2C91208BE3CB00F09D18 /* Resturants */ = {
 			isa = PBXGroup;
 			children = (
+				4DC5431C20925AF200E9801C /* ShoppingItem.swift */,
 				250C2C92208BE3CB00F09D18 /* AppDelegate.swift */,
 				250C2C94208BE3CB00F09D18 /* TakePhotoViewController.swift */,
+				4DC5431A2091A8E800E9801C /* TakePhotoIngredientsViewController.swift */,
 				25F5992E208BFF4A008CFB37 /* SearchResultsViewController.swift */,
+				4DC5432020925FA400E9801C /* ShoppingListViewController.swift */,
 				25F59936208C05A0008CFB37 /* ResturantCell.swift */,
+				4DC5431E20925B6D00E9801C /* ShoppingItemCell.swift */,
 				25F59930208C0117008CFB37 /* Resturant.swift */,
 				250C2C96208BE3CB00F09D18 /* Main.storyboard */,
 				250C2C99208BE3CC00F09D18 /* Assets.xcassets */,
@@ -211,11 +223,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DC5431F20925B6D00E9801C /* ShoppingItemCell.swift in Sources */,
 				250C2C95208BE3CB00F09D18 /* TakePhotoViewController.swift in Sources */,
 				25F5992F208BFF4A008CFB37 /* SearchResultsViewController.swift in Sources */,
 				25F59931208C0117008CFB37 /* Resturant.swift in Sources */,
 				25F59937208C05A0008CFB37 /* ResturantCell.swift in Sources */,
+				4DC5432120925FA400E9801C /* ShoppingListViewController.swift in Sources */,
+				4DC5431D20925AF200E9801C /* ShoppingItem.swift in Sources */,
 				250C2C93208BE3CB00F09D18 /* AppDelegate.swift in Sources */,
+				4DC5431B2091A8E800E9801C /* TakePhotoIngredientsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -361,13 +377,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2WJAQ39882;
+				DEVELOPMENT_TEAM = 5V3LQ73V87;
 				INFOPLIST_FILE = Resturants/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = qin.Resturants;
+				PRODUCT_BUNDLE_IDENTIFIER = yaoz.Resturants;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -380,13 +396,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2WJAQ39882;
+				DEVELOPMENT_TEAM = 5V3LQ73V87;
 				INFOPLIST_FILE = Resturants/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = qin.Resturants;
+				PRODUCT_BUNDLE_IDENTIFIER = yaoz.Resturants;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

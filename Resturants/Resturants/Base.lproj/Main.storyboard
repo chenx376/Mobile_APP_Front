@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="WXa-LB-RFe">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="d3v-p7-i0E">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -11,10 +11,11 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Navigation Controller-->
+        <!--Resturants-->
         <scene sceneID="qhX-Y0-pF2">
             <objects>
                 <navigationController id="WXa-LB-RFe" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Resturants" image="Players" selectedImage="Players" id="pIw-Xi-0bP"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="i80-08-9O5">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -25,7 +26,42 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vMY-S5-8Dn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-754" y="34"/>
+            <point key="canvasLocation" x="-1342" y="34"/>
+        </scene>
+        <!--Cooking-->
+        <scene sceneID="e4r-Kl-SKD">
+            <objects>
+                <navigationController id="wvX-1L-H9t" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Cooking" image="Gestures" id="4UJ-Lr-hNG"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="3h2-87-mE5">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="p8z-AH-gLe" kind="relationship" relationship="rootViewController" id="HzS-Xd-Hrc"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EUq-Cf-QV0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1366" y="783"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="Uyd-hH-wG7">
+            <objects>
+                <tabBarController id="d3v-p7-i0E" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="JAe-Dg-v0L">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="WXa-LB-RFe" kind="relationship" relationship="viewControllers" id="HhU-Dk-7M6"/>
+                        <segue destination="wvX-1L-H9t" kind="relationship" relationship="viewControllers" id="xrX-2U-Qbo"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="V0g-Wu-wxC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2294" y="379"/>
         </scene>
         <!--Take Photo-->
         <scene sceneID="tne-QT-ifu">
@@ -74,7 +110,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Take Photo" id="hl7-aF-HEx"/>
+                    <navigationItem key="navigationItem" title="Find Resturants" id="hl7-aF-HEx"/>
                     <connections>
                         <outlet property="photoImageView" destination="VJp-dg-GTK" id="GTb-K4-rDE"/>
                         <outlet property="takePhotoButton" destination="nf4-YP-9cl" id="eyi-Bs-1eM"/>
@@ -85,7 +121,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="32.799999999999997" y="33.733133433283363"/>
+            <point key="canvasLocation" x="-414" y="34"/>
         </scene>
         <!--Search Results-->
         <scene sceneID="geA-Ll-SG2">
@@ -96,7 +132,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Lx8-Vt-sNL">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="resturantCell" rowHeight="180" id="boU-Gr-nBq" customClass="ResturantCell" customModule="Resturants" customModuleProvider="target">
@@ -196,7 +232,122 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F6o-hK-rMk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="845.60000000000002" y="33.733133433283363"/>
+            <point key="canvasLocation" x="508" y="34"/>
+        </scene>
+        <!--Take Photo for Ingredients-->
+        <scene sceneID="mPD-aM-c0y">
+            <objects>
+                <viewController title="Take Photo for Ingredients" id="p8z-AH-gLe" customClass="TakePhotoIngredientsViewController" customModule="Resturants" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MJY-6Y-h7F">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Nq4-h1-ZDo">
+                                <rect key="frame" x="0.0" y="114" width="375" height="375"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Nq4-h1-ZDo" secondAttribute="height" multiplier="1:1" id="fQU-gH-lSW"/>
+                                </constraints>
+                            </imageView>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oQb-if-DeH">
+                                <rect key="frame" x="151" y="559" width="72" height="30"/>
+                                <state key="normal" title="Use Photo"/>
+                                <connections>
+                                    <action selector="usePhoto:" destination="p8z-AH-gLe" eventType="touchUpInside" id="gcG-fe-PoR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2qr-Ug-tFC">
+                                <rect key="frame" x="149" y="509" width="76" height="30"/>
+                                <state key="normal" title="Take Photo"/>
+                                <connections>
+                                    <action selector="takePhoto:" destination="p8z-AH-gLe" eventType="touchUpInside" id="QiA-SU-75N"/>
+                                </connections>
+                            </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="EOw-Zs-G5Z">
+                                <rect key="frame" x="233" y="564" width="20" height="20"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Nq4-h1-ZDo" firstAttribute="leading" secondItem="uzb-UV-hEf" secondAttribute="leading" id="5fj-1Y-m73"/>
+                            <constraint firstItem="oQb-if-DeH" firstAttribute="top" secondItem="2qr-Ug-tFC" secondAttribute="bottom" constant="20" id="6GS-lD-wg5"/>
+                            <constraint firstItem="EOw-Zs-G5Z" firstAttribute="leading" secondItem="oQb-if-DeH" secondAttribute="trailing" constant="10" id="7Rr-mk-Ns4"/>
+                            <constraint firstItem="EOw-Zs-G5Z" firstAttribute="centerY" secondItem="oQb-if-DeH" secondAttribute="centerY" id="7r4-kC-SGe"/>
+                            <constraint firstItem="2qr-Ug-tFC" firstAttribute="top" secondItem="Nq4-h1-ZDo" secondAttribute="bottom" constant="20" id="INr-tf-ghA"/>
+                            <constraint firstItem="Nq4-h1-ZDo" firstAttribute="top" secondItem="uzb-UV-hEf" secondAttribute="top" constant="50" id="J7U-e7-6kc"/>
+                            <constraint firstAttribute="trailing" secondItem="Nq4-h1-ZDo" secondAttribute="trailing" id="MVq-SQ-jAy"/>
+                            <constraint firstItem="oQb-if-DeH" firstAttribute="centerX" secondItem="uzb-UV-hEf" secondAttribute="centerX" id="N6o-qY-aMU"/>
+                            <constraint firstItem="2qr-Ug-tFC" firstAttribute="centerX" secondItem="uzb-UV-hEf" secondAttribute="centerX" id="ayF-zU-FGO"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="uzb-UV-hEf"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Get Ingredients List" id="eeB-pz-Q5e"/>
+                    <connections>
+                        <outlet property="photoImageView" destination="Nq4-h1-ZDo" id="xNq-rh-jAV"/>
+                        <outlet property="takePhotoButton" destination="2qr-Ug-tFC" id="c9G-TA-oHd"/>
+                        <outlet property="uploadActivityIndicatorView" destination="EOw-Zs-G5Z" id="y5T-ib-Xrj"/>
+                        <outlet property="usePhotoButton" destination="oQb-if-DeH" id="JeF-wh-rFD"/>
+                        <segue destination="T95-D5-AN5" kind="show" identifier="showShoppingList" id="T6f-TP-8PI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ivP-cB-0fs" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-415" y="780"/>
+        </scene>
+        <!--Shopping List View Controller-->
+        <scene sceneID="0uP-yo-dSs">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dfE-0N-qfy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="T95-D5-AN5" customClass="ShoppingListViewController" customModule="Resturants" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hNV-Ei-h5O">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hwj-0o-6aW">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="shoppingItemCell" id="YCf-X7-6AD" customClass="ShoppingItemCell" customModule="Resturants" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="YCf-X7-6AD" id="d4u-Jl-GoO">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oKA-aM-v6h">
+                                                    <rect key="frame" x="15" y="0.0" width="311" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <size key="shadowOffset" width="0.0" height="-6"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="nameLabel" destination="oKA-aM-v6h" id="qUI-bq-0u3"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="T95-D5-AN5" id="nnM-EG-e4K"/>
+                                    <outlet property="delegate" destination="T95-D5-AN5" id="3au-dE-leo"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="tz5-Ag-tB9"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="hwj-0o-6aW" id="Snq-GQ-pbb"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="472.80000000000001" y="778.56071964017997"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Gestures" width="30" height="30"/>
+        <image name="Players" width="30" height="30"/>
+    </resources>
 </document>

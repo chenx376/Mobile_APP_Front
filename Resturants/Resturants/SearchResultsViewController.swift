@@ -17,7 +17,7 @@ class SearchResultsViewController: UIViewController {
  
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.rowHeight = UITableViewAutomaticDimension
+//        tableView.rowHeight = UITableViewAutomaticDimension
     }
     
 }
