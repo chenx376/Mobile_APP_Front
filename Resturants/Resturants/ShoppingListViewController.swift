@@ -21,7 +21,7 @@ class ShoppingListViewController: UIViewController,UITableViewDataSource {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.rowHeight = 150.0
+        tableView.rowHeight = 60.0
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -31,16 +31,17 @@ class ShoppingListViewController: UIViewController,UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "shoppingItemCell", for: indexPath) as? ShoppingItemCell {
             cell.setData(with: shoppingItems[indexPath.row])
-            let backgroundView: UIImageView
             
-            if UIImage(named: shoppingItems[indexPath.row].name + ".jpg") != nil{
-                backgroundView = UIImageView(image: UIImage(named: shoppingItems[indexPath.row].name + ".jpg")!)
-            } else {
-                backgroundView = UIImageView(image: UIImage(named: "default.jpg")!)
-            }
+//            let backgroundView: UIImageView
+//
+//            if UIImage(named: shoppingItems[indexPath.row].name + ".jpg") != nil{
+//                backgroundView = UIImageView(image: UIImage(named: shoppingItems[indexPath.row].name + ".jpg")!)
+//            } else {
+//                backgroundView = UIImageView(image: UIImage(named: "default.jpg")!)
+//            }
             
-            backgroundView.contentMode = .scaleAspectFill
-            cell.backgroundView = backgroundView
+//            backgroundView.contentMode = .scaleAspectFill
+//            cell.backgroundView = backgroundView
 
             return cell
         }
