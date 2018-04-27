@@ -16,6 +16,10 @@
 		25F5992F208BFF4A008CFB37 /* SearchResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F5992E208BFF4A008CFB37 /* SearchResultsViewController.swift */; };
 		25F59931208C0117008CFB37 /* Resturant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F59930208C0117008CFB37 /* Resturant.swift */; };
 		25F59937208C05A0008CFB37 /* ResturantCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F59936208C05A0008CFB37 /* ResturantCell.swift */; };
+		4D3793E52093CF3700196D78 /* ShoppingResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3793E12093CF3500196D78 /* ShoppingResponse.swift */; };
+		4D3793E62093CF3700196D78 /* RecipeCelll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3793E22093CF3600196D78 /* RecipeCelll.swift */; };
+		4D3793E72093CF3700196D78 /* RecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3793E32093CF3600196D78 /* RecipeViewController.swift */; };
+		4D3793E82093CF3700196D78 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3793E42093CF3600196D78 /* Recipe.swift */; };
 		4DC5431B2091A8E800E9801C /* TakePhotoIngredientsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC5431A2091A8E800E9801C /* TakePhotoIngredientsViewController.swift */; };
 		4DC5431D20925AF200E9801C /* ShoppingItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC5431C20925AF200E9801C /* ShoppingItem.swift */; };
 		4DC5431F20925B6D00E9801C /* ShoppingItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC5431E20925B6D00E9801C /* ShoppingItemCell.swift */; };
@@ -35,6 +39,10 @@
 		25F59930208C0117008CFB37 /* Resturant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resturant.swift; sourceTree = "<group>"; };
 		25F59936208C05A0008CFB37 /* ResturantCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResturantCell.swift; sourceTree = "<group>"; };
 		3260565DF71B94D497883A2C /* Pods-Resturants.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Resturants.release.xcconfig"; path = "Pods/Target Support Files/Pods-Resturants/Pods-Resturants.release.xcconfig"; sourceTree = "<group>"; };
+		4D3793E12093CF3500196D78 /* ShoppingResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShoppingResponse.swift; sourceTree = "<group>"; };
+		4D3793E22093CF3600196D78 /* RecipeCelll.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeCelll.swift; sourceTree = "<group>"; };
+		4D3793E32093CF3600196D78 /* RecipeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeViewController.swift; sourceTree = "<group>"; };
+		4D3793E42093CF3600196D78 /* Recipe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 		4DC5431A2091A8E800E9801C /* TakePhotoIngredientsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakePhotoIngredientsViewController.swift; sourceTree = "<group>"; };
 		4DC5431C20925AF200E9801C /* ShoppingItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingItem.swift; sourceTree = "<group>"; };
 		4DC5431E20925B6D00E9801C /* ShoppingItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingItemCell.swift; sourceTree = "<group>"; };
@@ -75,6 +83,10 @@
 		250C2C91208BE3CB00F09D18 /* Resturants */ = {
 			isa = PBXGroup;
 			children = (
+				4D3793E42093CF3600196D78 /* Recipe.swift */,
+				4D3793E22093CF3600196D78 /* RecipeCelll.swift */,
+				4D3793E32093CF3600196D78 /* RecipeViewController.swift */,
+				4D3793E12093CF3500196D78 /* ShoppingResponse.swift */,
 				4DC5431C20925AF200E9801C /* ShoppingItem.swift */,
 				250C2C92208BE3CB00F09D18 /* AppDelegate.swift */,
 				250C2C94208BE3CB00F09D18 /* TakePhotoViewController.swift */,
@@ -224,12 +236,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				4DC5431F20925B6D00E9801C /* ShoppingItemCell.swift in Sources */,
+				4D3793E62093CF3700196D78 /* RecipeCelll.swift in Sources */,
 				250C2C95208BE3CB00F09D18 /* TakePhotoViewController.swift in Sources */,
 				25F5992F208BFF4A008CFB37 /* SearchResultsViewController.swift in Sources */,
 				25F59931208C0117008CFB37 /* Resturant.swift in Sources */,
+				4D3793E52093CF3700196D78 /* ShoppingResponse.swift in Sources */,
 				25F59937208C05A0008CFB37 /* ResturantCell.swift in Sources */,
 				4DC5432120925FA400E9801C /* ShoppingListViewController.swift in Sources */,
+				4D3793E72093CF3700196D78 /* RecipeViewController.swift in Sources */,
 				4DC5431D20925AF200E9801C /* ShoppingItem.swift in Sources */,
+				4D3793E82093CF3700196D78 /* Recipe.swift in Sources */,
 				250C2C93208BE3CB00F09D18 /* AppDelegate.swift in Sources */,
 				4DC5431B2091A8E800E9801C /* TakePhotoIngredientsViewController.swift in Sources */,
 			);

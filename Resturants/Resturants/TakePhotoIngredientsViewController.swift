@@ -18,6 +18,7 @@ class TakePhotoIngredientsViewController: UIViewController {
     
     var photo: UIImage?
     var shoppingItems: [ShoppingItem]?
+    var response: ShoppingResponse?
     
     @IBAction func takePhoto(_ sender: UIButton) {
         let imagePickerController = UIImagePickerController()
@@ -31,41 +32,20 @@ class TakePhotoIngredientsViewController: UIViewController {
             usePhotoButton.isEnabled = false
             uploadActivityIndicatorView.startAnimating()
             
-//            Alamofire.upload(multipartFormData: { multipartFormData in
-//                multipartFormData.append(imageData, withName: "fileset",fileName: "file.jpg", mimeType: "image/jpg")
-//            },to:"172.29.95.188/test")
-//            { (result) in
-//                switch result {
-//                case .success(let upload, _, _):
-//
-//                    upload.uploadProgress(closure: { (progress) in
-//                        print("Upload Progress: \(progress.fractionCompleted)")
-//                    })
-//
-//                    upload.responseJSON { response in
-//                        print(response.result.value!)
-//                    }
-//
-//                case .failure(let encodingError):
-//                    print(encodingError)
-//                }
-//            }
-            
             
             let imageString = imageData.base64EncodedString(options: .endLineWithLineFeed)
             let parameters:[String: String] = [
                 "image":imageString
             ]
             
-            
-            
-//            Alamofire.upload(imageData.base64EncodedData(options: .endLineWithLineFeed), to: "http://172.29.95.188:8585/shopping")
-//                .validate()
-            Alamofire.request("http://172.29.94.19:8585/shopping", method: .post,parameters: parameters, encoding: URLEncoding.httpBody)
+
+            Alamofire.request("http://35.231.62.8:80/shopping", method: .post,parameters: parameters, encoding: URLEncoding.httpBody)
                 .responseJSON { response in
-                    if let data = response.data, let sp = try? JSONDecoder().decode([ShoppingItem].self, from: data){
-                        if sp.count > 0 {
-                            self.shoppingItems = sp
+                    if let data = response.data, let response = try? JSONDecoder().decode(ShoppingResponse.self, from: data){
+                        self.response = response
+                        
+                        if response.ingredients.count > 0{
+                           self.shoppingItems = response.ingredients
                         } else {
                             self.shoppingItems = [ShoppingItem("Can't find any ingredients")]
                         }
@@ -81,6 +61,7 @@ class TakePhotoIngredientsViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         (segue.destination as? ShoppingListViewController)?.shoppingItems = shoppingItems
+        (segue.destination as? ShoppingListViewController)?.response = response
     }
     
 }

@@ -8,15 +8,20 @@
 
 import UIKit
 
-class ShoppingListViewController: UIViewController,UITableViewDataSource,UITableViewDelegate {
+class ShoppingListViewController: UIViewController,UITableViewDataSource {
     
+    var response: ShoppingResponse!
     var shoppingItems: [ShoppingItem]!
     
     @IBOutlet weak var tableView: UITableView!
     
+    @IBAction func checkRecipe(_ sender: Any) {
+        performSegue(withIdentifier: "showRecipe", sender: self)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.rowHeight = 150.0
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -26,7 +31,16 @@ class ShoppingListViewController: UIViewController,UITableViewDataSource,UITable
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "shoppingItemCell", for: indexPath) as? ShoppingItemCell {
             cell.setData(with: shoppingItems[indexPath.row])
-//            cell.backgroundView = UIImageView(image: UIImage(named: "patato.jpg")!)
+            let backgroundView: UIImageView
+            
+            if UIImage(named: shoppingItems[indexPath.row].name + ".jpg") != nil{
+                backgroundView = UIImageView(image: UIImage(named: shoppingItems[indexPath.row].name + ".jpg")!)
+            } else {
+                backgroundView = UIImageView(image: UIImage(named: "default.jpg")!)
+            }
+            
+            backgroundView.contentMode = .scaleAspectFill
+            cell.backgroundView = backgroundView
 
             return cell
         }
@@ -42,5 +56,18 @@ class ShoppingListViewController: UIViewController,UITableViewDataSource,UITable
         // Pass the selected object to the new view controller.
     }
     */
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        (segue.destination as? RecipeViewController)?.recipes = response.recipes
+    }
 
 }
+
+extension ShoppingListViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
+}
+
